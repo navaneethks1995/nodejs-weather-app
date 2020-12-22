@@ -13,7 +13,7 @@ const forecast = (lat, lon, cb) => {
                   temperature: body.current.temperature,
                   feelslike: body.current.feelslike
               }
-            cb(undefined, `Weather: ${body.current.weather_descriptions[0]}. It is ${body.current.temperature} degrees out. It feels like ${body.current.feelslike} degrees.`);
+            cb(undefined, `Weather: ${body.current.weather_descriptions[0]}. It is ${body.current.temperature} degrees out. It feels like ${body.current.feelslike} degrees. Observed Time is ${body.current.observation_time}.`);
           }
         });
 }
